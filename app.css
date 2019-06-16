@@ -1,0 +1,25 @@
+.heading{
+    margin-top: 150px; !important
+}
+.name_lab{
+    left: 0 !important
+}
+.task_in{
+    margin-top: 50px
+}
+
+.edit_b,.delete_b{
+    width: 35px !important;
+    height: 35px !important;
+    margin-left: 10px !important;
+}
+.collection .collection-item{
+    padding: 20px 20px;!important
+}
+.checked_activity label{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.hide{
+    display:none;
+}

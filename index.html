@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" />
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $('.tooltipped').tooltip({delay: 50});
+  });
+        $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+    </script>
+</head>
+<body>
+    
+    <!-- to do list-->
+    <div class="container" id="to-do-portion">
+    <h4 class=" card-panel heading pink darken-2 TDA_head center-align white-text">To Do App</h4>
+    <ul class="collection with-header" id="to-do-list">
+        <li class="collection-item">
+            <input type="checkbox" id="checkboxid1" class="filled-in"><label for="checkboxid1">HomeWork</label> 
+            <button class="btn-small btn-floating red right delete_b"><i class="material-icons">delete</i></button>
+            <a href="#modal2" class="btn-small btn-floating blue right edit_b modal-trigger"><i class="material-icons">edit</i></a>
+        </li>
+        <li class="collection-item">
+            <input type="checkbox" id="checkboxid2" class="filled-in"><label for="checkboxid2">Bill Payment</label>
+            <button class="btn-floating btn-small waves-effect right red delete_b"><i class="material-icons">delete</i></button>
+             <a href="#modal2" class="btn-small btn-floating blue right edit_b modal-trigger"><i class="material-icons">edit</i></a>
+        </li>
+        <li class="collection-item">
+            <input type="checkbox" id="checkboxid3" class="filled-in"><label for="checkboxid3">Cricket Match</label>
+            <button class="btn-floating btn-small waves-effect right red delete_b"><i class="material-icons">delete</i></button>
+                    <a href="#modal2" class="btn-small btn-floating blue right edit_b modal-trigger"><i class="material-icons">edit</i></a>
+        </li>
+        <li class="collection-item">
+            <input type="checkbox" id="checkboxid4" class="filled-in"><label for="checkboxid4">Client Meeting</label>
+            <button class="btn-floating btn-small waves-effect right red delete_b"><i class="material-icons">delete</i></button>
+                    <a href="#modal2" class="btn-small btn-floating blue right edit_b modal-trigger"><i class="material-icons">edit</i></a>
+        </li>
+      </ul>
+    </div>
+    <!-- add task-->
+ <div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4 class="card-panel pink darken-2 white-text">Add Task</h4>
+    <div class="input-field col s6 task_in">
+          <input placeholder="eg:Bill Payment" id="first_name1" type="text" class="validate">
+          <label for="first_name1" class="name_lab">Add Task to do</label>
+        </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action  waves-effect modal-close waves-green btn-flat" id='add_save'>ADD</a>
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+  </div>
+     <!-- buttons-->
+</div>
+    <div class="fixed-action-btn">
+  <a class="btn-floating btn-large red">
+    <i class="large material-icons">mode_edit</i>
+  </a>
+  <ul>
+    <li><a class="btn-floating red tooltipped" data-position="left" data-tooltip="Clear all"><i class="material-icons" id="clrtask">close</i></a></li>
+    <li><a class="btn-floating yellow darken-1 tooltipped modal-trigger" href="#modal1" data-position="left" data-tooltip="Add Task" id='save'><i class="material-icons">add</i></a></li>
+    <li><a id="incomtask" class="btn-floating green tooltipped" data-position="left" data-tooltip="Incomplete Task" ><i class="material-icons">filter_none</i></a></li>
+    <li><a id="comtask" class="btn-floating blue tooltipped" data-position="left" data-tooltip="Completed Task"><i class="material-icons">check</i></a></li>
+      <li><a id="alltask" class="btn-floating purple    tooltipped" data-position="left" data-tooltip="All Task"><i class="material-icons">view_list</i></a></li>
+  </ul>
+</div>
+    </body> 
+    <script src="app.js"></script>
+</html>
